@@ -267,7 +267,7 @@ public class MatchHistory {
      */
 
     private static void printSpecificKDA() {
-        System.out.println("Ples gieff champion name: ");
+        System.out.println("Enter name of champion: ");
         String lolChampionName = scanner.nextLine();
         LolMatches existingLolMatches = leagueOfLegends.queryGames(lolChampionName);
         if (existingLolMatches == null) {
