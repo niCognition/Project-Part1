@@ -76,7 +76,7 @@ public class MatchHistory {
 
                     while (!sortLolQuit){
                         printLolSortMenu();
-                        System.out.println("Pick print option: (3 to show sort menu again)");
+                        System.out.println("Pick print option: (3 to show menu)");
                         int sortLolAction = scanner.nextInt();
                         scanner.nextLine();
 
@@ -102,7 +102,7 @@ public class MatchHistory {
                 case 4:
                     while (!sortCsGoQuit) {
                         printCsGoSortMenu();
-                        System.out.println("Pick print option: ");
+                        System.out.println("Pick print option: (3 to show menu)");
                         int sortCsGoAction = scanner.nextInt();
                         scanner.nextLine();
 
@@ -128,7 +128,7 @@ public class MatchHistory {
                 case 5:
                     while (!sortWowBgQuit) {
                         printWowSortMenu();
-                        System.out.println("Pick print option: ");
+                        System.out.println("Pick print option: (3 to show menu)");
                         int sortWowBgAction = scanner.nextInt();
                         scanner.nextLine();
 
@@ -351,5 +351,4 @@ public class MatchHistory {
                 "\t 2 - Print in added order\n" +
                 "\t 3 - Show print menu");
     }
-
 }

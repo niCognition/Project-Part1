@@ -3,6 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="7d11c3be-32fb-47b2-934b-658b04771b7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/CounterStrikeGo.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/CounterStrikeGo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/CsGoMatches.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/CsGoMatches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/Games.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/Games.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/LeagueOfLegends.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/LeagueOfLegends.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/LolMatches.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/LolMatches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/MatchHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/MatchHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByBattleground.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByBattleground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByCsGoMap.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByCsGoMap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByLolChampion.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/SortByLolChampion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/WorldOfWarcraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/WorldOfWarcraft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/WowBattleground.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/WowBattleground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com/exercise/matchhistory/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/overview-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/exercise/matchhistory/MatchHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/exercise/matchhistory/MatchHistory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +53,7 @@
   <component name="ProjectId" id="1RNCyOpWYWVgVnGhwvfMP0QKxwD" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/IntelliJ projekt skolan/Exempel Array2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
@@ -77,7 +106,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
