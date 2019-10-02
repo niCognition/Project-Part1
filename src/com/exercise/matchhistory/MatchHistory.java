@@ -29,7 +29,7 @@ public class MatchHistory {
         printMainMenu();
 
         while(!quit) {
-            System.out.println("\nChoose your destiny: (9 to show Main menu)");
+            System.out.println("\nChoose your destiny: (10 to show Main menu)");
             int action = scanner.nextInt();
             scanner.nextLine();
 
@@ -69,6 +69,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    subQuit = false;
                     printMainMenu();
                     break;
                 case 3:
@@ -95,6 +96,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    sortLolQuit = false;
                     printMainMenu();
                     break;
                 case 4:
@@ -120,6 +122,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    sortCsGoQuit = false;
                     printMainMenu();
                     break;
                 case 5:
@@ -145,6 +148,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    sortWowBgQuit = false;
                     printMainMenu();
                     break;
                 case 6:
@@ -174,7 +178,7 @@ public class MatchHistory {
      */
 
     private static void addNewLolMatch() {
-        System.out.println("Enter Victory or defeat: ");
+        System.out.println("Enter Victory or Defeat: ");
         String result = scanner.nextLine();
         System.out.println("Enter champion name: ");
         String lolChampionName = scanner.nextLine();

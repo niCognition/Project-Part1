@@ -9,13 +9,13 @@ public class WowBattleground extends Games {
 
     /**
      * Constructor for WowBattleground
-     * @param result
-     * @param kills
-     * @param deaths
-     * @param assists
-     * @param gameTime
-     * @param wowBg
-     * @param wowHonor
+     * @param result Victory/Defeat
+     * @param kills Number of kills
+     * @param deaths Number of deaths
+     * @param assists Number of assists
+     * @param gameTime Game length
+     * @param wowBg Battleground name
+     * @param wowHonor Honor received.
      */
     public WowBattleground(String result, int kills, int deaths, int assists, int gameTime, String wowBg, int wowHonor) {
         super(result, kills, deaths, assists, gameTime);
