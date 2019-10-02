@@ -19,7 +19,7 @@ public class CounterStrikeGo {
     }
 
     /**
-     * Method to add new elements to array.
+     * Method to add new elements to ArrayList.
      * @param csGoMatches
      */
 

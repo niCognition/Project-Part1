@@ -1,6 +1,5 @@
 package com.exercise.matchhistory;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class MatchHistory {
@@ -16,8 +15,8 @@ public class MatchHistory {
         boolean sortLolQuit = false;
         boolean sortCsGoQuit = false;
         boolean sortWowBgQuit = false;
-        matchHistory(); //Start meddelande för app
-        printMainMenu(); //Main menu val
+        matchHistory();
+        printMainMenu();
         while(!quit) {
             System.out.println("\nChoose your destiny: (9 to show Main menu)");
             int action = scanner.nextInt();
@@ -85,6 +84,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    printMainMenu();
                     break;
                 case 4:
                     while (!sortCsGoQuit) {
@@ -109,6 +109,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
+                    printMainMenu();
                     break;
                 case 5:
                     while (!sortWowBgQuit) {
@@ -133,7 +134,7 @@ public class MatchHistory {
                                 break;
                         }
                     }
-                    worldOfWarcraft.printMatch();
+                    printMainMenu();
                     break;
                 case 6:
                     leagueOfLegends.printKDA();
@@ -255,20 +256,23 @@ public class MatchHistory {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
                 "\t 1 - Sort by Champion name\n" +
-                "\t 2 - Print in added order\n");
+                "\t 2 - Print in added order\n" +
+                "\t 3 - Show print menu\n");
     }
 
     private static void printCsGoSortMenu() {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
                 "\t 1 - Sort by Map\n" +
-                "\t 2 - Print in added order\n");
+                "\t 2 - Print in added order\n" +
+                "\t 3 - Show print menu\n");
     }
 
     private static void printWowSortMenu() {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
                 "\t 1 - Sort by Battleground\n" +
-                "\t 3 - Print in added order\n");
+                "\t 2 - Print in added order\n" +
+                "\t 3 - Show print menu");
     }
 }
