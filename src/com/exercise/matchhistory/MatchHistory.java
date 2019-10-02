@@ -2,6 +2,16 @@ package com.exercise.matchhistory;
 
 import java.util.Scanner;
 
+/**
+ * A Match History application, that saves matches from different games.
+ * Can display match histories added as long as the application is running.
+ * League of Legends, Counter Strike:Go, World of Warcraft
+ * Has a menu that guides the user through the process of adding, showing, calculating KDA etc.
+ *
+ * @author Niclas Pettersson
+ * @version 1.0
+ * @since 2019-10-02
+ */
 public class MatchHistory {
     private static Scanner scanner = new Scanner(System.in);
     private static LeagueOfLegends leagueOfLegends = new LeagueOfLegends("niCognition");
@@ -17,6 +27,7 @@ public class MatchHistory {
         boolean sortWowBgQuit = false;
         matchHistory();
         printMainMenu();
+
         while(!quit) {
             System.out.println("\nChoose your destiny: (9 to show Main menu)");
             int action = scanner.nextInt();
@@ -146,12 +157,22 @@ public class MatchHistory {
                     worldOfWarcraft.printKDA();
                     break;
                 case 9:
+                    printSpecificKDA();
+                    break;
+                case 10:
                     printMainMenu();
                     break;
             }
         }
     }
-    //To remove or not remove duplicate if's, like the cs:go add match. that is the question..
+
+    /**
+     * Method to add new match to League of Legends
+     * Asks user for Victory/Defeat, Name of champion played, #of kills, deaths, assists and game length in minutes.
+     * Then checks the ArrayList to see if a game with that champion is added.
+     * Then adds to LolMatches arraylist or tells the user that a match of that champion is already in the list.
+     */
+
     private static void addNewLolMatch() {
         System.out.println("Enter Victory or defeat: ");
         String result = scanner.nextLine();
@@ -178,6 +199,12 @@ public class MatchHistory {
         }
     }
 
+    /**
+     * Method to add new match to Counter Strike:GO
+     * Asks user for Victory/Defeat, Name of map played, #of kills, deaths, assists and game length in minutes.
+     * Then creates a new object in CsGoMatches arraylist.
+     */
+
     private static void addNewCsGoMatch() {
         System.out.println("Enter Win or Loss: ");
         String result = scanner.nextLine();
@@ -200,6 +227,12 @@ public class MatchHistory {
         System.out.println("New Counter Strike:Global Offensive match added:");
         System.out.println("Result and Map: " + result + " : " + csGoMap + ", K/D/A: " + kills + "/" + deaths + "/" + assists + ", Game length: " + gameTime + " minutes.");
     }
+
+    /**
+     * Method to add new battleground to World of Warcraft
+     * Asks user for Victory/Defeat, Name of battleground, #of kills, deaths, assists, honor gained and game length(min)
+     * Then adds to WowBattleground arraylist.
+     */
 
     private static void addNewWowBattleground() {
         System.out.println("Enter Victory or Defeat: ");
@@ -227,9 +260,35 @@ public class MatchHistory {
         System.out.println("Result and Battleground: " + result + " : " + wowBg + ", K/D/A: " + kills + "/" + deaths + "/" + assists + ", Honor gained: " + wowHonor + ", Bg length: " + gameTime + " minutes.");
     }
 
+    /**
+     * Asks user for a specific game of League of Legends and calculates the KDA((Kills+Assists) / Deaths) of that game.
+     * Application asks user for champion name finds the object in LeagueOfLegends arraylist
+     * Then creates a new object which is a clone of the existing object and uses that to calculate KDA of that game. Then prints it for the user to see.
+     */
+
+    private static void printSpecificKDA() {
+        System.out.println("Ples gieff champion name: ");
+        String lolChampionName = scanner.nextLine();
+        LolMatches existingLolMatches = leagueOfLegends.queryGames(lolChampionName);
+        if (existingLolMatches == null) {
+            System.out.println("There's no game history recorded of that champion.");
+            return;
+        }
+        double kda = (double)((existingLolMatches.getKills() + existingLolMatches.getAssists()) / existingLolMatches.getDeaths());
+        System.out.println(existingLolMatches.getLolChampionName() + " Kills: " + existingLolMatches.getKills() + " Deaths: " + existingLolMatches.getDeaths() + " Assists: " + " - KDA of match: " + kda);
+    }
+
+    /**
+     * Boot up message method.
+     */
     private static void matchHistory() {
         System.out.println("\nBooting up match history..");
     }
+
+    /**
+     * Main menu method.
+     * Displays Main menu.
+     */
     private static void printMainMenu() {
         System.out.println("\tMain menu:\n");
         System.out.println("\t 0 - Turn off\n" +
@@ -241,9 +300,13 @@ public class MatchHistory {
                 "\t 6 - Calculate KDA for League of Legends games\n" +
                 "\t 7 - Calculate KDA for Counter Strike matches\n" +
                 "\t 8 - Calculate KDA for World of Warcraft battlegrounds\n" +
-                "\t 9 - Show Main menu\n");
+                "\t 9 - Show KDA of specific League of Legends game\n" +
+                "\t 10 - Show Main menu\n");
     }
 
+    /**
+     * Add new match sub menu.
+     */
     private static void printSubMenu() {
         System.out.println("\tGame menu:\n");
         System.out.println("\t 0 - Back to Main menu\n" +
@@ -252,6 +315,9 @@ public class MatchHistory {
                 "\t 3 - World of Warcraft battleground\n");
     }
 
+    /**
+     * League of Legends print match history menu.
+     */
     private static void printLolSortMenu() {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
@@ -260,6 +326,9 @@ public class MatchHistory {
                 "\t 3 - Show print menu\n");
     }
 
+    /**
+     * Counter Strike:Go print match history menu.
+     */
     private static void printCsGoSortMenu() {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
@@ -268,6 +337,9 @@ public class MatchHistory {
                 "\t 3 - Show print menu\n");
     }
 
+    /**
+     * World of Warcraft print battleground history menu.
+     */
     private static void printWowSortMenu() {
         System.out.println("\tPrint menu:");
         System.out.println("\t 0 - Back to Main menu\n" +
@@ -275,4 +347,5 @@ public class MatchHistory {
                 "\t 2 - Print in added order\n" +
                 "\t 3 - Show print menu");
     }
+
 }

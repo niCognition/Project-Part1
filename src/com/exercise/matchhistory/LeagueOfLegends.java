@@ -3,16 +3,28 @@ package com.exercise.matchhistory;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Control Class for League of Legends ArrayList and Methods.
+ */
 public class LeagueOfLegends {
     private String lolGameTag;
     private ArrayList<LolMatches> myLolMatches;
 
+    /**
+     * Constructor for LeagueOfLegends
+     * @param lolGameTag
+     */
 
     public LeagueOfLegends(String lolGameTag) {
         this.lolGameTag = lolGameTag;
         this.myLolMatches = new ArrayList<LolMatches>();
     }
 
+    /**
+     * Boolean method to check if game exists in arraylist adds new object if not found.
+     * @param lolMatches
+     * @return
+     */
 
     public boolean addNewGame(LolMatches lolMatches) {
         if (findGames(lolMatches.getLolChampionName()) >=0) {
@@ -24,7 +36,20 @@ public class LeagueOfLegends {
         return true;
     }
 
+    /**
+     * Method to find specific matches in arraylist.
+     * @param lolMatches
+     * @return
+     */
+    private int findGames(LolMatches lolMatches) {
+        return this.myLolMatches.indexOf(lolMatches);
+    }
 
+    /**
+     * Overload of findGames with other parameters.
+     * @param lolChampionName
+     * @return
+     */
     private int findGames(String lolChampionName) {
         for (int i = 0; i < this.myLolMatches.size(); i++) {
             LolMatches lolMatches = this.myLolMatches.get(i);
@@ -34,17 +59,35 @@ public class LeagueOfLegends {
         }
         return -1;
     }
-    //In case I want to add remove function
-    /*
-    private LolMatches queryGames(String lolChampionName) {
+
+    /**
+     * Method to return object in arraylist
+     * @param lolMatches
+     * @return
+     */
+    public String queryGames(LolMatches lolMatches) {
+        if (findGames(lolMatches) >= 0) {
+            return lolMatches.getLolChampionName();
+        }
+        return null;
+    }
+
+    /**
+     * Overload of queryGames to use other parameters
+     * @param lolChampionName
+     * @return
+     */
+    public LolMatches queryGames(String lolChampionName) {
         int position = findGames(lolChampionName);
         if (position >= 0) {
             return this.myLolMatches.get(position);
         }
         return null;
     }
-    */
 
+    /**
+     * Method which uses the class SortByLolChampion to sort and print the sorted arraylist.
+     */
     public void printSortedByChampion() {
         Collections.sort(myLolMatches, new SortByLolChampion());
         printMatch();
@@ -66,6 +109,9 @@ public class LeagueOfLegends {
         }
     }
 
+    /**
+     * Method that takes the elements of every array in the arraylist and calculates KDA then prints the result.
+     */
     public void printKDA() {
         System.out.println("KDA calculator for League of Legends games:");
         for (int i = 0; i < this.myLolMatches.size(); i++) {

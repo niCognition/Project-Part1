@@ -4,6 +4,9 @@ package com.exercise.matchhistory;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Control Class for Counter Strike:Global Offensive ArrayList and Methods.
+ */
 public class CounterStrikeGo {
     private String csGoGameTag;
     private ArrayList<CsGoMatches> myCsGoMatches;
@@ -19,7 +22,7 @@ public class CounterStrikeGo {
     }
 
     /**
-     * Method to add new elements to ArrayList.
+     * Method to add new objects to ArrayList.
      * @param csGoMatches
      */
 
@@ -28,31 +31,14 @@ public class CounterStrikeGo {
 
     }
 
-    //In case I want to add remove function
-    /*
-    private int findGames(String csGoMap) {
-        for (int i = 0; i < this.myCsGoMatches.size(); i++) {
-            CsGoMatches csGoMatches = this.myCsGoMatches.get(i);
-            if (csGoMatches.getCsGoMap().equals(csGoMap)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    private CsGoMatches queryGames(String csGoMap) {
-        int position = findGames(csGoMap);
-        if (position >= 0) {
-            return this.myCsGoMatches.get(position);
-        }
-        return null;
-    }
-    */
-
+    /**
+     * Method which uses the class SortByCsGoMap to sort and print the sorted arraylist.
+     */
     public void printSortedByMap() {
         Collections.sort(myCsGoMatches, new SortByCsGoMap());
         printMatch();
     }
+
     /**
      * Method for printing Counter Strike:Global Offensive match history elements that's been added.
      */
@@ -69,6 +55,9 @@ public class CounterStrikeGo {
         }
     }
 
+    /**
+     * Method that takes the elements of every array in the arraylist and calculates KDA then prints the result.
+     */
     public void printKDA() {
         System.out.println("KDA calculator for Counter Strike:Global Offensive games:");
         for (int i = 0; i < this.myCsGoMatches.size(); i++) {

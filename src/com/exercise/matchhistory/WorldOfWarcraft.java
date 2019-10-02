@@ -3,24 +3,41 @@ package com.exercise.matchhistory;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Control Class for World of Warcraft ArrayList and methods
+ */
 public class WorldOfWarcraft {
     private String wowGameTag;
     private ArrayList<WowBattleground> myWowBattleground;
 
+    /**
+     * Constructor for WorldOfWarcraft
+     * @param wowGameTag
+     */
     public WorldOfWarcraft(String wowGameTag) {
         this.wowGameTag = wowGameTag;
         this.myWowBattleground = new ArrayList<WowBattleground>();
     }
 
+    /**
+     * Method to add new objects to ArrayList
+     * @param wowBattleground
+     */
     public void addNewGame(WowBattleground wowBattleground) {
         myWowBattleground.add(wowBattleground);
     }
 
+    /**
+     * Method which uses the class SortByBattleground to sort and print the sorted arraylist
+     */
     public void printSortedByBattleground() {
         Collections.sort(myWowBattleground, new SortByBattleground());
         printMatch();
     }
 
+    /**
+     * Method for printing World of Warcraft battleground history elements that's been added.
+     */
     public void printMatch() {
             System.out.println("World of Warcraft Battleground PvP: ");
             for (int i = 0; i < this.myWowBattleground.size(); i++) {
@@ -35,6 +52,9 @@ public class WorldOfWarcraft {
         }
     }
 
+    /**
+     * Method that takes the elements of every array in the arraylist and calculates KDA then prints the result.
+     */
     public void printKDA() {
         System.out.println("KDA calculator for World of Warcraft battlegrounds:");
         for (int i = 0; i < this.myWowBattleground.size(); i++) {
