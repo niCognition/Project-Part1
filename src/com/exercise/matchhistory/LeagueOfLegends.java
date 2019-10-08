@@ -101,6 +101,7 @@ public class LeagueOfLegends {
             System.out.println("League of Legends: ");
             for (int i = 0; i < this.myLolMatches.size(); i++) {
                 System.out.println((i + 1) + "." +
+                        this.myLolMatches.get(i).getResult() + " " +
                         this.myLolMatches.get(i).getLolChampionName() + ", Kills: " +
                         this.myLolMatches.get(i).getKills() + ", Deaths: " +
                         this.myLolMatches.get(i).getDeaths() + ", Assists: " +

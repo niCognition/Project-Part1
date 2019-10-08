@@ -29,7 +29,7 @@ public class MatchHistory {
         printMainMenu();
 
         while(!quit) {
-            System.out.println("\nChoose your destiny: (10 to show Main menu)");
+            System.out.println("\nChoose your destiny! (10 to show Main menu)");
             int action = scanner.nextInt();
             scanner.nextLine();
 
@@ -199,7 +199,7 @@ public class MatchHistory {
             System.out.println("New League of Legends match added:");
             System.out.println("Result and Champion: " + result + " - " + lolChampionName + ", K/D/A: " + kills + "/" + deaths + "/" + assists + ", Game length: " + gameTime + " minutes.");
         } else {
-            System.out.println("Cannot add, " + lolChampionName + " already in list.");
+            System.out.println("Cannot add champion, " + lolChampionName + " already in list.");
         }
     }
 
